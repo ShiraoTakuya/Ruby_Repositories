@@ -25,6 +25,17 @@ def add_csv(str, ar)
 	end
 end
 
+def select_exam(arr)
+	intRand = 0
+	floutTh = rand()
+	10.times do
+		intRand = rand(1..arr.size-1)
+		break if arr[intRand][1].to_i == 0
+		break if arr[intRand][2].to_f / arr[intRand][1].to_f < floutTh
+	end
+	intRand
+end
+
 ### MAIN BEGIN ###
 
 return if ARGV[0] == nil
@@ -36,8 +47,7 @@ end
 
 if ARGV[0] == "EXAM"
 	ar = open_csv("SET_PARAM.csv")
-	size = ar.size
-	intRand = rand(1..size-1)
+	intRand = select_exam(ar)
 
 	# issue EXAM
 	wsh = WIN32OLE.new('WScript.Shell')
