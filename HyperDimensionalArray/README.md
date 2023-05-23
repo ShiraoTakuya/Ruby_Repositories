@@ -1,0 +1,35 @@
+﻿# ARフォルダをデータベースとして指定した組の平均を計算
+
+ARフォルダ内の違うフォルダ同士のデータの演算ができるため、例えば以下のようなことができます。
+* 時間ごとに全ての装置全てのデータの平均を取って時間影響を見る
+* 日付ごとに全ての装置全てのデータの平均を取って日差影響を見る
+* 温度環境ごとに全ての装置全てのデータの平均を取って温度影響を見る
+ 
+# 実行例
+
+パラメータ設定
+
+![cap_param](https://raw.githubusercontent.com/ShiraoTakuya/Csharp_Repositories/main/AllCalculationPattern/cap.PNG)
+
+実行結果
+
+![cap_results](https://raw.githubusercontent.com/ShiraoTakuya/Csharp_Repositories/main/AllCalculationPattern/cap.PNG)
+ 
+# Requirement
+ 
+RubyXLが必要です。
+
+```bash
+gem install rubyXL -v 3.3.29
+```
+ 
+# Usage
+
+以下の手順を行う
+* ARフォルダに好きに改装分けをして好きにデータ(.txt)を入れる
+* SET_PARAM.xlsxに平均したい組み合わせを入れる
+* Run.cmdを実行する
+ 
+# Author
+  
+* ShiraoTakuya
