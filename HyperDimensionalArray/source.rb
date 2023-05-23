@@ -3,8 +3,13 @@ require 'RubyXL'
 
 #Arrayクラスにaverage機能を追加
 class Array
-	def average
+	def ave
 		self.inject(:+) / self.length
+	end
+	def std
+		mean = self.inject(:+) / self.length.to_f
+		sum_of_squares = self.map { |num| (num - mean) ** 2 }.inject(:+)
+		Math.sqrt(sum_of_squares / self.length)
 	end
 end
 
@@ -61,7 +66,7 @@ def AnalysisDataUseSetDataFromDir(stPath, arSetDataRow)
 	hash = select_hash(hashDatabase, arSetDataRow)
 
 	#数値抽出 & 演算
-	all_data(hash).average
+	[all_data(hash).ave, all_data(hash).std, all_data(hash).max, all_data(hash).min]
 end
 
 def main()
@@ -77,7 +82,7 @@ def main()
 	arAnalysisData.each_with_index do |data, i|
 		puts "\nNo." + (i+1).to_s
 		puts "演算条件: " + data[0].to_s
-		puts "計算結果: " + data[1].to_s + "\n"
+		puts "AVE:" + data[1][0].to_s + ", " + "STD:" + data[1][1].to_s + ", " + "MAX:" + data[1][2].to_s + ", " + "MIN:" + data[1][3].to_s +  "\n"
 	end
 end
 
