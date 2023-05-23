@@ -9,11 +9,11 @@ ARフォルダ内の違うフォルダ同士のデータの演算ができるた
 
 パラメータ設定
 
-![cap_param](https://raw.githubusercontent.com/ShiraoTakuya/Csharp_Repositories/main/AllCalculationPattern/cap.PNG)
+![cap_param](https://raw.githubusercontent.com/ShiraoTakuya/Ruby_Repositories/main/HyperDimensionalArray/cap_param.PNG)
 
 実行結果
 
-![cap_results](https://raw.githubusercontent.com/ShiraoTakuya/Csharp_Repositories/main/AllCalculationPattern/cap.PNG)
+![cap_results](https://raw.githubusercontent.com/ShiraoTakuya/Ruby_Repositories/main/HyperDimensionalArray/cap_results.PNG)
  
 # Requirement
  
